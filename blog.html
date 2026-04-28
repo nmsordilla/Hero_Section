@@ -13,34 +13,53 @@
       <p class="subtitle">
         Predicting Hidden ESX Substrates in <em>Mycobacterium tuberculosis</em>
       </p>
+      <img
+        src="thesis-flow.png"
+        alt="Thesis workflow diagram"
+        class="blog-image"
+      />
 
       <section>
         <h2>Thesis overview</h2>
         <p>
-          For my master’s thesis in Bioinformatics at UHasselt and the Institute of Tropical Medicine Antwerp, I explored a question at the intersection of machine learning, structural biology, and infectious disease:
+          For my master’s thesis in Bioinformatics at UHasselt and the Institute
+          of Tropical Medicine Antwerp, I explored a question at the
+          intersection of machine learning, structural biology, and infectious
+          disease:
         </p>
         <p class="highlight">
-          Can we computationally predict previously unknown Type VII Secretion System (T7SS / ESX) protein substrates in <em>Mycobacterium tuberculosis</em> (Mtb)?
+          Can we computationally predict previously unknown Type VII Secretion
+          System (T7SS / ESX) protein substrates in
+          <em>Mycobacterium tuberculosis</em> (Mtb)?
         </p>
       </section>
 
       <section>
         <h2>Why this matters</h2>
         <p>
-          Tuberculosis remains one of the world’s deadliest infectious diseases, and <em>M. tuberculosis</em> owes much of its success to specialized virulence systems that help it evade host immunity. One of the most important is the Type VII Secretion System (T7SS or ESX), which exports proteins that manipulate host-pathogen interactions.
+          Tuberculosis remains one of the world’s deadliest infectious diseases,
+          and <em>M. tuberculosis</em> owes much of its success to specialized
+          virulence systems that help it evade host immunity. One of the most
+          important is the Type VII Secretion System (T7SS or ESX), which
+          exports proteins that manipulate host-pathogen interactions.
         </p>
         <p>
-          Many known ESX substrates, such as EsxA/ESAT-6, are central to virulence and vaccine development. But a major challenge remains: many ESX substrates are still unknown.
+          Many known ESX substrates, such as EsxA/ESAT-6, are central to
+          virulence and vaccine development. But a major challenge remains: many
+          ESX substrates are still unknown.
         </p>
         <p>
-          Identifying them experimentally is slow and resource-intensive, so I investigated whether machine learning could help prioritize likely candidates for future validation.
+          Identifying them experimentally is slow and resource-intensive, so I
+          investigated whether machine learning could help prioritize likely
+          candidates for future validation.
         </p>
       </section>
 
       <section>
         <h2>The core idea</h2>
         <p>
-          Rather than relying on sequence motifs alone, I built a predictive framework that integrates three biological information layers:
+          Rather than relying on sequence motifs alone, I built a predictive
+          framework that integrates three biological information layers:
         </p>
         <div class="feature-list">
           <div>
@@ -71,7 +90,9 @@
           </div>
         </div>
         <p>
-          This multi-layered approach reflects an important biological reality: protein function is not determined by sequence alone — structure and genomic context matter.
+          This multi-layered approach reflects an important biological reality:
+          protein function is not determined by sequence alone — structure and
+          genomic context matter.
         </p>
       </section>
 
@@ -92,7 +113,8 @@
           <li>Support Vector Machine (SVM)</li>
         </ul>
         <p>
-          Because ESX substrates are rare, class imbalance was a major challenge. I tested:
+          Because ESX substrates are rare, class imbalance was a major
+          challenge. I tested:
         </p>
         <ul>
           <li>Baseline</li>
@@ -105,21 +127,28 @@
       <section>
         <h2>Key findings</h2>
         <p>
-          Best model: <strong>Support Vector Machine (SVM) + Decision Threshold Calibration</strong>
+          Best model:
+          <strong
+            >Support Vector Machine (SVM) + Decision Threshold
+            Calibration</strong
+          >
         </p>
         <p>
           Performance:
-          <strong>F1-score: 0.992</strong>, <strong>Precision: &gt;0.999</strong>, <strong>Recall: 0.985</strong>
+          <strong>F1-score: 0.992</strong>,
+          <strong>Precision: &gt;0.999</strong>, <strong>Recall: 0.985</strong>
         </p>
         <p>
-          This means the model was highly effective at identifying ESX substrates while minimizing false positives.
+          This means the model was highly effective at identifying ESX
+          substrates while minimizing false positives.
         </p>
       </section>
 
       <section>
         <h2>Biological insight: Structure mattered most</h2>
         <p>
-          One of the most exciting findings was that structural and genomic features outperformed sequence-only features.
+          One of the most exciting findings was that structural and genomic
+          features outperformed sequence-only features.
         </p>
         <p>Top predictors included:</p>
         <ul>
@@ -128,37 +157,52 @@
           <li>PE/PPE genomic organization</li>
         </ul>
         <p>
-          This suggests that hidden ESX substrates may preserve functional architecture even when sequence similarity is weak, making structural bioinformatics especially powerful for pathogen discovery.
+          This suggests that hidden ESX substrates may preserve functional
+          architecture even when sequence similarity is weak, making structural
+          bioinformatics especially powerful for pathogen discovery.
         </p>
       </section>
 
       <section>
         <h2>Final outcome</h2>
         <p>
-          Applying the optimized model across the Mtb proteome identified <strong>176 high-confidence candidate ESX substrates</strong>, including PE/PPE family proteins, WXG100-like proteins, and 36 previously uncharacterized proteins.
+          Applying the optimized model across the Mtb proteome identified
+          <strong>176 high-confidence candidate ESX substrates</strong>,
+          including PE/PPE family proteins, WXG100-like proteins, and 36
+          previously uncharacterized proteins.
         </p>
         <p>
-          These candidates now represent potential starting points for wet lab validation, virulence studies, vaccine target exploration, and therapeutic discovery.
+          These candidates now represent potential starting points for wet lab
+          validation, virulence studies, vaccine target exploration, and
+          therapeutic discovery.
         </p>
       </section>
 
       <section>
         <h2>Bigger picture</h2>
         <p>
-          This thesis reinforced something I deeply value as a bioinformatician: machine learning becomes most powerful when grounded in biological context.
+          This thesis reinforced something I deeply value as a bioinformatician:
+          machine learning becomes most powerful when grounded in biological
+          context.
         </p>
         <p>
-          By combining genomics, sequence analysis, structural biology, and predictive modeling, computational research can help accelerate discoveries against diseases like tuberculosis.
+          By combining genomics, sequence analysis, structural biology, and
+          predictive modeling, computational research can help accelerate
+          discoveries against diseases like tuberculosis.
         </p>
       </section>
 
       <section>
         <h2>Personal reflection</h2>
         <p>
-          This project was more than a classification problem. It was my first major step toward bridging statistics + machine learning + molecular biology + global health.
+          This project was more than a classification problem. It was my first
+          major step toward bridging statistics + machine learning + molecular
+          biology + global health.
         </p>
         <p>
-          As someone coming from a statistical and data science background, this work strengthened my goal of contributing to infectious disease research through computational biology.
+          As someone coming from a statistical and data science background, this
+          work strengthened my goal of contributing to infectious disease
+          research through computational biology.
         </p>
       </section>
 
